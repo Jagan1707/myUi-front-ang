@@ -1,0 +1,44 @@
+    
+    
+    
+<!-- <app-navigate></app-navigate>  -->
+<!-- <app-sing-up></app-sing-up> -->
+
+<!-- <router-outlet></router-outlet> -->
+
+<!-- <div *ngIf="loginstatus == 'false'">
+   
+</div> -->
+ 
+<!-- <div *ngIf="loginstatus == 'true'">
+    <app-navigate></app-navigate>
+</div> -->
+
+<!--------------------------------------------------------------------------------- -->
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark" *ngIf="auth.isAuthencated">
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" routerLink="/home" routerLinkActive = "active">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/product" routerLinkActive = "active">Products</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/profile" routerLinkActive = "active">profile</a>
+            </li>
+          </ul>
+    <form class="form-inline my-2 my-lg-0">
+        <div class="flex">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            <button class="btn btn-primary my-2 my-sm-0 log" type="button" (click)="auth.Logout()">Logout</button>
+        </div>
+    </form>  
+    </div></div>
+</nav>
+  <router-outlet></router-outlet>
+
+<!-- <app-home></app-home> -->
